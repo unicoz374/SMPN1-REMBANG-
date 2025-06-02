@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kegiatan OSIS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #e6f0ff;
+      color: #002147;
+    }
+
+    .menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+      padding: 15px;
+      background: #003366;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    #sidebar {
+      height: 100%;
+      width: 250px;
+      background: #004080;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 3;
+    }
+
+    #sidebar a {
+      display: block;
+      padding: 15px 25px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    #sidebar a:hover {
+      background: #0059b3;
+    }
+
+    .close-icon {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    .content {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #003366;
+    }
+
+    .kegiatan {
+      background: white;
+      border-left: 6px solid #004080;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .kegiatan h2 {
+      margin-top: 0;
+      color: #004080;
+    }
+
+    .kegiatan p {
+      margin: 5px 0 0;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-icon" onclick="openSidebar()">☰</div>
+
+  <div id="sidebar">
+    <div class="close-icon" onclick="closeSidebar()">×</div>
+    <a href="index.html">Beranda</a>
+    <a href="visi-misi.html">Visi Misi</a>
+    <a href="kegiatan.html">Kegiatan</a>
+    <a href="kontak.html">Kontak</a>
+  </div>
+
+  <div class="content">
+    <h1>Kegiatan OSIS</h1>
+
+    <div class="kegiatan">
+      <h2>Lomba 17 Agustus</h2>
+      <p>Perlombaan antar kelas dalam rangka memperingati Hari Kemerdekaan RI, seperti tarik tambang, balap karung, dan futsal antar kelas.</p>
+    </div>
+
+    <div class="kegiatan">
+      <h2>Pentas Seni</h2>
+      <p>Ajang unjuk bakat siswa-siswi dalam bidang seni seperti musik, tari, drama, dan puisi yang dilaksanakan setiap akhir semester.</p>
+    </div>
+
+    <div class="kegiatan">
+      <h2>Donor Darah</h2>
+      <p>Kegiatan sosial bekerja sama dengan PMI untuk membantu sesama melalui program donor darah sukarela.</p>
+    </div>
+
+    <div class="kegiatan">
+      <h2>Class Meeting</h2>
+      <p>Kegiatan kompetisi antar kelas setelah ujian akhir semester, mencakup olahraga, game edukatif, dan lomba kreativitas.</p>
+    </div>
+  </div>
+
+  <script>
+    function openSidebar() {
+      document.getElementById("sidebar").style.left = "0";
+    }
+    function closeSidebar() {
+      document.getElementById("sidebar").style.left = "-250px";
+    }
+  </script>
+</body>
+</html>
